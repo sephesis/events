@@ -1,0 +1,1 @@
+export const json_path = '/json/';

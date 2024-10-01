@@ -1,0 +1,22 @@
+{
+    "1": {
+        "id": "1",
+        "text_ru": "Прогулка",
+        "text_en": "To go"
+    },
+    "2": {  
+        "id": "2",
+        "text_ru": "Поесть",
+        "text_en": "To eat"
+    },
+    "3": {  
+        "id": "3",
+        "text_ru": "Мероприятие",
+        "text_en": "Event"
+    },
+    "4": {  
+        "id": "4",
+        "text_ru": "Попить",
+        "text_en": "to Drink"
+    }
+}

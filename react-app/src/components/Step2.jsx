@@ -4,7 +4,7 @@ import Button from "./Button";
 import { json_path } from '../constants.js';
 import Checkbox from './Checkbox';
 
-const Step2 = ({ onBack }) => {
+const Step2 = ({formData, onNext, onBack, onChange }) => {
 
     const [checkboxData, setCheckboxData] = useState([]);
 
@@ -30,11 +30,12 @@ const Step2 = ({ onBack }) => {
     }, []);
     return (
         <div className="form-group">
-            <h1>Шаг 2</h1>
+            <h1>Выберите деятельность</h1>
             {checkboxData.length && checkboxData.map(item => (
-                <Checkbox key={item.id} id={item.id} text={item.text_ru} />
+                <Checkbox onChange={onChange} formData={formData} key={item.id} id={item.id} text={item.text_ru} />
             ))}
-            <Button onClick={onBack}>Далее</Button>
+             <Button onClick={onBack}>Назад</Button>
+            <Button onClick={onNext}>Далее</Button>
         </div>
     );
 }

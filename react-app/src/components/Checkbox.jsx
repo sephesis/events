@@ -1,10 +1,10 @@
 
 
-const Checkbox = ({text, id }) => {
+const Checkbox = ({text, id, formData, onChange }) => {
     return (
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id={id}></input>
-            <label class="form-check-label" htmlFor={id}>{text}</label>
+        <div className="form-check">
+            <input className="form-check-input" onChange={onChange} checked={formData.areas.includes(id)} value={id} type="checkbox" id={id}></input>
+            <label className="form-check-label" htmlFor={id}>{text}</label>
         </div>
     );
 };

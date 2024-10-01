@@ -3,9 +3,8 @@ import Button from "./Button";
 import { json_path } from '../constants.js';
 import CityList from "./CityList";
 
-const Step1 = ({ onNext }) => {
+const Step1 = ({ formData, onNext, onChange }) => {
 
-    const [title, setTitle] = useState('Выберите город');
     const [citiesData, setCitiesData] = useState([]);
 
     useEffect(() => {
@@ -28,8 +27,8 @@ const Step1 = ({ onNext }) => {
 
     return (
         <div className="form-group">
-            <h1>{title}</h1>
-            {<CityList data={citiesData} />}
+            <h1>Выберите город</h1>
+            {<CityList data={citiesData} formData={formData} onChange={onChange} />}
             <Button onClick={onNext}>Далее</Button>
         </div>
     );

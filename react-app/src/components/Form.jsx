@@ -9,7 +9,7 @@ const Form = ({}) => {
     const [currentStep, setCurrentStep] = useState(1);
 
     const [formData, setFormData] = useState({
-        city: '',
+        city: '7700000000000',
         price: 0,
         areas: []
     });

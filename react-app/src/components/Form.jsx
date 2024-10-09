@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
+import { api_path } from "../constants";
 
 const Form = ({}) => {
 
@@ -43,11 +44,23 @@ const Form = ({}) => {
         });
     };
 
-    const handleSubmit = (e) => {
-        // Обработка отправки формы
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Данные формы:', formData);
-        alert('Форма отправлена!');
+        
+        try {
+            const response = await fetch(api_path, {
+                method: 'POST',
+                header: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) {
+            console.log('Ошибка при отправке формы');
+        }
+
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     return (

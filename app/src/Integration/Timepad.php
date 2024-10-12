@@ -25,11 +25,11 @@ class Timepad
         ];
 
         $query = [
-            'cities' => 'Москва,Санкт-петербург',
+            'cities' => 'Москва,Санкт-Петербург',
             'fields' => 'location',
             'sort' => '+starts_at'
         ];
-        
+
         $info = $client->get($query, $headers, self::ENDPOINTS['events']);
 
         if ($info["total"] > 0) {

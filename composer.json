@@ -8,7 +8,8 @@
     ],
     "require": {
         "php": ">=8.0.0",
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.9",
+        "spatie/data-transfer-object": "^3.9"
     },
     "autoload": {
         "psr-4": {

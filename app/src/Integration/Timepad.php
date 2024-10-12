@@ -2,6 +2,7 @@
 
 namespace App\Integration;
 
+use App\DTOBuilder\Event;
 use App\Tools\HTTPClient\HTTPClient;
 
 class Timepad
@@ -25,7 +26,7 @@ class Timepad
         ];
 
         $query = [
-            'cities' => 'Москва,Санкт-Петербург',
+            'cities' => 'Москва',
             'fields' => 'location',
             'sort' => '+starts_at'
         ];
@@ -33,9 +34,16 @@ class Timepad
         $info = $client->get($query, $headers, self::ENDPOINTS['events']);
 
         if ($info["total"] > 0) {
-            echo '<pre>';
-            var_dump($info); die;
+           $events = self::buildDTO($info['values']);
+
+           echo '<pre>';
+           var_dump($events); die;
         }
+    }
+
+    public static function buildDTO($events)
+    {
+        return (new Event)->buildList($events);
     }
 
 }

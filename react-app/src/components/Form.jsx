@@ -4,6 +4,7 @@ import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import { api_path } from "../constants";
+import "../css/style.css";
 
 const Form = ({}) => {
 

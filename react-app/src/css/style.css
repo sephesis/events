@@ -1,0 +1,74 @@
+
+:root {
+    --main-btn-bg-color: #FF9C28;
+    --main-btn-color: #1E1E1E;
+    --main-btn-hover-color: #ffffff;
+    --main-btn-hover-bg: #ffffff;
+    --main-btn-hover-border: #FF9C28;
+    
+    --back-btn-bg-color: #ffffff;
+    --back-btn-border-color: #FF9C28;
+    --back-btn-hover-bg: #FF9C28;
+
+    --font-weight-semi-bold: 600;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+select, input {
+    outline: none;
+}
+
+.city__list {
+    height: 60px;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.h1 {
+    font-size: 30px;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.form__top {
+    display: flex;
+    align-items: center;
+}
+.circle {
+    width: 16px;
+    height: 16px;
+    background-color: var(--main-btn-bg-color);
+    margin-left: 25px;
+    border-radius: 50%;
+}
+
+.button {
+    padding: 12px 52px;
+    font-size: 20px;
+    border-radius: 50px;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.button__main {
+    background-color: var(--main-btn-bg-color);
+    color: var(--main-btn-color) ;
+    border: 2px solid var(--main-btn-bg-color);
+}
+
+.button__main:hover {
+    background-color: var(--main-btn-hover-bg);
+    border: 2px solid var(--main-btn-hover-border);
+    transition: all 0.5s ease;
+}
+
+.button__back {
+    background-color: var(--back-btn-bg-color);
+    border: 2px solid var(--back-btn-border-color);
+}
+
+.button__back:hover {
+    background-color: var(--back-btn-hover-bg);
+    border: 2px solid var(--back-btn-hover-bg);
+    transition: all 0.5s ease;
+}

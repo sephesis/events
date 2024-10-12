@@ -17,8 +17,8 @@ const Step3 = ({ formData, onBack, onChange, onSubmit }) => {
             max="5000" 
             step="100" 
             placeholder={'Введите сумму'} />
-            <Button onClick={onBack}>Назад</Button>
-            <Button onClick={onSubmit}>Найти</Button>
+            <Button customClass={'button__back'} onClick={onBack}>Назад</Button>
+            <Button customClass={'button__main'} onClick={onSubmit}>Найти</Button>
         </div>
     );
 }

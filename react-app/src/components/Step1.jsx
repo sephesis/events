@@ -27,9 +27,13 @@ const Step1 = ({ formData, onNext, onChange }) => {
 
     return (
         <div className="form-group">
-            <h1>Выберите город</h1>
+            <div className="form__top">
+            <h1 className="h1">Выберите город из списка</h1>
+            <span className="circle"></span>
+            </div>
+            
             {<CityList data={citiesData} formData={formData} onChange={onChange} />}
-            <Button onClick={onNext}>Далее</Button>
+            <Button customClass="button__main" onClick={onNext}>Далее</Button>
         </div>
     );
 }

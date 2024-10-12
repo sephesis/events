@@ -34,8 +34,8 @@ const Step2 = ({formData, onNext, onBack, onChange }) => {
             {checkboxData.length && checkboxData.map(item => (
                 <Checkbox onChange={onChange} formData={formData} key={item.id} id={item.id} text={item.text_ru} />
             ))}
-             <Button onClick={onBack}>Назад</Button>
-            <Button onClick={onNext}>Далее</Button>
+             <Button customClass={'button__back'} onClick={onBack}>Назад</Button>
+            <Button customClass={'button__main'} onClick={onNext}>Далее</Button>
         </div>
     );
 }

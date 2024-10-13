@@ -32,12 +32,11 @@ class Timepad
         ];
 
         $info = $client->get($query, $headers, self::ENDPOINTS['events']);
-
+       
         if ($info["total"] > 0) {
            $events = self::buildDTO($info['values']);
 
-           echo '<pre>';
-           var_dump($events); die;
+          
         }
     }
 

@@ -20,7 +20,8 @@ class Event
                 'startsAt' => DateFormatter::format($data['starts_at']),
                 'imgUrl' => $data['poster_image']['default_url'] ?? '',
                 'location' => $data['location'] ?? [],
-                'categories' => $data['categories']?? [],
+                'categories' => $data['categories'] ?? [],
+                'featured' => true,
             ]
 
         );

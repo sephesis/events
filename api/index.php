@@ -5,6 +5,7 @@ require __DIR__. '/../vendor/autoload.php';
 
 use App\Tools\Web\Json;
 use App\Integration\Timepad;
+use App\Integration\KudaGo;
 
 // Обработка preflight-запросов
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
@@ -12,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit;
 }
 
-Timepad::get('');
+KudaGo::get('');
 
 
 echo Json::encode(array("message" => "Hello World!")); die;

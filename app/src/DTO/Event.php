@@ -22,4 +22,6 @@ class Event extends DataTransferObject
     public array $categories;
 
     public bool $featured;
+
+    public string $ageRestiction;
 }

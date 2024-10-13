@@ -3,6 +3,7 @@
 namespace App\Integration;
 
 use App\DTOBuilder\Event;
+use App\Formatters\EventFormatter;
 use App\Tools\HTTPClient\HTTPClient;
 
 class KudaGo
@@ -33,6 +34,6 @@ class KudaGo
       $info = $client->get($query, $headers, self::ENDPOINTS['events']);
 
       echo '<pre>';
-      var_dump($info);
+      var_dump(EventFormatter::prepare($info['results']));
     }
 }
